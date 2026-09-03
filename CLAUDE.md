@@ -22,16 +22,18 @@ Example: `[Driver App] Add push notification support`
 
 | Status      | Transition ID |
 | ----------- | ------------- |
-| In Progress | `31`          |
+| In Progress | `4`           |
 | Review      | `51`          |
 | For Test    | `61`          |
 | Done        | `41`          |
+
+> Note: transition `31` is also named "In Progress" in Jira but is misconfigured — it actually lands on a status labeled "To Do". Transition `4` ("Start Working") is the one that correctly lands on the real "In Progress" status. Use `4` until the workflow is fixed in Jira admin settings.
 
 ## Git Workflow
 
 **Always follow these steps in order:**
 
-1. Move the Jira ticket to **In Progress** (transition ID: `31`) using the Atlassian MCP
+1. Move the Jira ticket to **In Progress** (transition ID: `4`) using the Atlassian MCP
 2. Create a branch from `main` — `git checkout main && git pull && git checkout -b <type>/TPO-XXX-short-description`
 3. Write the code
 4. Commit with format: `type: TPO-XXX description`
